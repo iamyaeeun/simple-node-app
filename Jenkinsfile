@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'cloudcomputing-401706'
         CLUSTER_NAME = 'cluster1'
         LOCATION = 'asia-northeast3-a'
-        CREDENTIALS_ID = 'gke'
+        CREDENTIALS_ID = 'bb429487-8eb3-4417-84a5-2d23f10f81cf'
     }
     stages {
         stage("Checkout code") {
@@ -22,7 +22,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'gke') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'bb429487-8eb3-4417-84a5-2d23f10f81cf') {
                             myapp.push("latest")
                             myapp.push("${env.BUILD_ID}")
                     }
