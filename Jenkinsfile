@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'cloudcomputing-401706'
-        CLUSTER_NAME = 'cluster1'
+        PROJECT_ID = 'opensource-398212'
+        CLUSTER_NAME = 'kube'
         LOCATION = 'asia-northeast3-a'
-        CREDENTIALS_ID = 'bb429487-8eb3-4417-84a5-2d23f10f81cf'
+        CREDENTIALS_ID = 'gke'
     }
     stages {
         stage("Checkout code") {
